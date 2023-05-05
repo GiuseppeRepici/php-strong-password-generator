@@ -11,9 +11,7 @@ function generaStringaRandom($lunga) {
 ?>
 
 <?php 
-if(isset($_GET["lunghezza"])){
-    $lunghezza = $_GET["lunghezza"];
-}
+
 ?>
 
 
@@ -36,6 +34,11 @@ if(isset($_GET["lunghezza"])){
             <button class="btn btn-primary">Invia</button>
     </form>
 
-    <h2><?php echo generaStringaRandom($lunghezza); ?></h2>
+    <h2><?php 
+    if(isset($_GET["lunghezza"])){
+    $lunghezza = $_GET["lunghezza"];
+    echo generaStringaRandom($lunghezza); 
+    }
+    ?></h2>
 </body>
 </html>
